@@ -46,7 +46,9 @@ class Application
   end
   
   def handle_add(add_item)
-    if @@items.include(add_item)
+    if @@items.include?(add_item)
       @@cart << add_item
+      return "added #{add_item}"
+    else 
       return ""
 end
